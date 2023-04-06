@@ -1,0 +1,142 @@
+<!-- Shopping Cart -->
+
+
+<div class="shopping-cart section">
+  <div class="container px-5">
+      <div class="cart-list-head">
+          <!-- Cart List Title -->
+          <div class="cart-list-title">
+              <div class="row">
+                  <div class="col-lg-1 col-md-1 col-12">
+
+                  </div>
+                  <div class="col-lg-4 col-md-3 col-12">
+                      <p>Product Name</p>
+                  </div>
+                  <div class="col-lg-2 col-md-2 col-12">
+                      <p>Quantity</p>
+                  </div>
+                  <div class="col-lg-2 col-md-2 col-12">
+                      <p>Subtotal</p>
+                  </div>
+                  <div class="col-lg-2 col-md-2 col-12">
+                      <p>Total</p>
+                  </div>
+                  <div class="col-lg-1 col-md-2 col-12">
+                      <p>Remove</p>
+                  </div>
+              </div>
+          </div>
+          <!-- End Cart List Title -->
+          <!-- Cart Single List list -->
+
+          <div class="cart-single-list"  *ngFor="let item of cartProductsss">
+              <div class="row align-items-center">
+                  <div class="col-lg-1 col-md-1 col-12">
+                      <a href="product-details.html"><img [src]="item.image_url" alt="#"></a>
+                  </div>
+                  <div class="col-lg-4 col-md-3 col-12">
+                      <h5 class="product-name"><a href="product-details.html">
+                              {{item.name}}</a></h5>
+                      <p class="product-des">
+                          <span *ngIf="item.category_id==1"><em>Category:</em> Male</span>
+                          <span *ngIf="item.category_id==2"><em>Category:</em> Famale</span>
+                          <span><em>Size:</em>{{item.size}}</span>
+                      </p>
+                  </div>
+                  <div class="col-lg-2 col-md-2 col-12">
+                      <div class="count-input">
+                        <!-- <input type="text" [value]="item.amount"> -->
+                        <select class="p-2 rounded-3" [value]="item.amount" #amount (change)="onSelected(+amount.value)" (change)="totalAmount()">
+                          <option value="1">1</option>
+                          <option value="2">2</option>
+                          <option value="3">3</option>
+                          <option value="4">4</option>
+
+                        </select>
+                        <!-- <button type="button" class="py-1 px-2 mx-1 mins" (click)="mins()"> - </button>
+                        <input type="text" [(ngModel)]="amount" class="px-2 py-1">
+                        <button type="button" class="py-1 px-2 mx-1 plus" (click)="plus()"> + </button> -->
+                      </div>
+                  </div>
+                  <div class="col-lg-2 col-md-2 col-12">
+                      <p>{{item.price}} <small> EGP</small> </p>
+                  </div>
+                  <div class="col-lg-2 col-md-2 col-12">
+                      <p>{{(+amount.value)*item.price}} <small> EGP</small> </p>
+                  </div>
+                  <div class="col-lg-1 col-md-2 col-12">
+                      <a class="remove-item p-3  px-4 position-relative rounded-2" (click)="removeOrder(item.id)" href="javascript:void(0)"><i class="lni lni-close position-absolute top-50 start-50 translate-middle fs-6"></i></a>
+                  </div>
+              </div>
+          </div>
+          <!-- End Single List list -->
+
+      </div>
+      <div class="row">
+          <div class="col-12">
+              <!-- Total Amount -->
+              <div class="total-amount">
+                  <div class="row">
+                      <div class="col-lg-8 col-md-6 col-12">
+                          <div class="left">
+                              <div class="coupon ">
+                                  <!-- <form action="#" target="_blank">
+                                      <input name="Coupon" placeholder="Enter Your Coupon">
+                                      <div class="button">
+                                          <button class="btn">Apply Coupon</button>
+                                      </div>
+                                  </form> -->
+                                  <img class="w-100 h-100" src="https://th.bing.com/th/id/OIP.l5Qqm9adevg4VKQ1SERzNgHaDA?pid=ImgDet&rs=1" alt="">
+                              </div>
+                          </div>
+                      </div>
+                      <div class="col-lg-4 col-md-6 col-12">
+                          <div class="right">
+                              <ul>
+                                <li>Number of orders<span>{{cartProductsss.length}}</span></li>
+                                  <li>Cart Total<span>{{total}} EGP</span></li>
+                                  <li>Shipping<span>Free</span></li>
+                                  <!-- <li class="last">You Pay<span>$2531.00</span></li> -->
+                              </ul>
+                              <div class="button">
+                                  <a onclick="document.getElementById('id01').style.display='block'" class="btn">Checkout</a>
+                                  <a routerLink="/home" class="btn btn-alt">Continue shopping</a>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+              <!--/ End Total Amount -->
+          </div>
+      </div>
+  </div>
+</div>
+<!--/ End Shopping Cart -->
+
+
+<div id="id01" class="modal">
+
+  <form class="modal-content animate" action="/action_page.php" method="post">
+    <div class="imgcontainer">
+      <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+    </div>
+
+    <div class="container pb-5">
+      <label><b>Your Name</b></label>
+      <input type="text" required #name (change)="addName(name.value)">
+
+      <label><b>Adress</b></label>
+      <input type="text" required #address (change)="addAddress(address.value)">
+
+      <label><b>Phone</b></label>
+      <input type="text" required #phone (change)="addPhone(phone.value)">
+
+      <button type="button" (click)="featchAllData()"  onclick="document.getElementById('id01').style.display='none'">Submit</button>
+      <label>
+        <input type="checkbox" checked="checked" name="remember"> Remember me
+      </label>
+    </div>
+  </form>
+</div>
+

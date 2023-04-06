@@ -1,0 +1,28 @@
+/*:root{*/
+/*  --main-color: rgb(15, 54, 93) !important;*/
+/*}*/
+
+/*.body,.btnSubmit{*/
+/*  background-color: var(--main-color) !important;*/
+/*}*/
+/*h1{*/
+/*  color: var(--main-color) !important;*/
+/*}*/
+.btnSubmit,tr{
+  color: #ffffff;
+}
+.btnSubmit{
+  color: rgb(255, 255, 255);
+  background: #10438c;
+  border: 2px solid rgb(16, 67, 140);
+}
+.form-form{
+  width:50%;
+  margin: auto;
+}
+.btn-success{
+  margin-right: 10px;
+}
+.color-h1{
+  color:#fff;
+}

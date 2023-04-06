@@ -1,0 +1,406 @@
+
+<header class="header navbar-area">
+<!-- Start Header Middle -->
+<div class="header-middle">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-3 col-md-3 col-7">
+                <!-- Start Header Logo -->
+                <a class="navbar-brand" >
+                    <img src="assets/images/logo/logo.svg" alt="Logo">
+                </a>
+                <!-- End Header Logo -->
+            </div>
+
+            <div class="col-lg-5 col-md-7 d-xs-none">
+                <!-- Start Main Menu Search -->
+                <div class="main-menu-search">
+                    <!-- navbar search start -->
+                    <div class="navbar-search search-style-5">
+                        <div class="search-select">
+
+                        </div>
+                        <div class="search-input">
+                            <input type="text" placeholder="Search" [(ngModel)]="search">
+                        </div>
+                        <div class="search-btn">
+                            <button><i class="lni lni-search-alt"></i></button>
+                        </div>
+                    </div>
+                    <!-- navbar search Ends -->
+                </div>
+                <!-- End Main Menu Search -->
+            </div>
+            <div class="col-lg-4 col-md-2 col-5">
+                <div class="middle-right-area">
+                    <div class="nav-hotline">
+                        <i class="lni lni-phone"></i>
+                    </div>
+                    <div class="navbar-cart">
+                        <div class="wishlist">
+                            <a href="javascript:void(0)" class="position-relative">
+                                <i class="lni lni-heart position-absolute top-50 start-50 translate-middle"></i>
+                                <span class="total-items">0</span>
+                            </a>
+                        </div>
+                        <div class="cart-items">
+                            <a href="javascript:void(0)" class="main-btn position-relative">
+                                <i class="lni lni-cart position-absolute top-50 start-50 translate-middle"></i>
+                                <span class="total-items">{{cartProducts.length}}</span>
+                            </a>
+                            <!-- Shopping Item -->
+                            <div class="shopping-item">
+                                <div class="dropdown-cart-header">
+                                    <span>2 Items</span>
+                                    <a href="cart.html">View Cart</a>
+                                </div>
+                                <ul class="shopping-list">
+                                    <li>
+                                        <a href="javascript:void(0)" class="remove position-relative" title="Remove this item">
+                                          <i class="lni lni-close position-absolute top-50 start-50 translate-middle"></i></a>
+                                        <div class="cart-img-head">
+                                            <a class="cart-img" href="product-details.html"><img
+                                                    src="assets/images/header/cart-items/item1.jpg" alt="#"></a>
+                                        </div>
+                                        <div class="content">
+                                            <h4><a href="product-details.html">
+                                                    Apple Watch Series 6</a></h4>
+                                            <p class="quantity">1x - <span class="amount">$99.00</span></p>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:void(0)" class="remove" title="Remove this item">
+                                          <i class="lni lni-close"></i></a>
+                                        <div class="cart-img-head">
+                                            <a class="cart-img" href="product-details.html"><img
+                                                    src="assets/images/header/cart-items/item2.jpg" alt="#"></a>
+                                        </div>
+                                        <div class="content">
+                                            <h4><a href="product-details.html">Wi-Fi Smart Camera</a></h4>
+                                            <p class="quantity">1x - <span class="amount">$35.00</span></p>
+                                        </div>
+                                    </li>
+                                </ul>
+                                <div class="bottom">
+                                    <div class="total">
+                                        <span>Total</span>
+                                        <span class="total-amount">$134.00</span>
+                                    </div>
+                                    <div class="button">
+                                        <a routerLink="/checkout" class="btn animate">Checkout</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--/ End Shopping Item -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- End Header Middle -->
+<!-- Start Header Bottom -->
+<div class="container">
+    <div class="row align-items-center">
+        <div class="col-lg-8 col-md-6 col-12">
+            <div class="nav-inner">
+                <!-- Start Mega Category Menu -->
+
+                <!-- Start Navbar -->
+                <nav class="navbar navbar-expand-lg">
+                    <button class="navbar-toggler mobile-menu-btn" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="toggler-icon"></span>
+                        <span class="toggler-icon"></span>
+                        <span class="toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse sub-menu-bar" id="navbarSupportedContent">
+                        <ul id="nav" class="navbar-nav ms-auto">
+
+
+                            <li class="nav-item">
+                                <a class="dd-menu collapsed" href="javascript:void(0)" data-bs-toggle="collapse"
+                                    data-bs-target="#submenu-1-4" aria-controls="navbarSupportedContent"
+                                    aria-expanded="false" aria-label="Toggle navigation">All Categories</a>
+                                <ul class="sub-menu collapse" id="submenu-1-4">
+                                    <li class="nav-item"><a routerLink="/woman">Woman</a>
+                                    </li>
+                                    <li class="nav-item"><a routerLink="/men">Men</a></li>
+
+                                </ul>
+                            </li>
+                        </ul>
+                    </div> <!-- navbar collapse -->
+                </nav>
+                <!-- End Navbar -->
+            </div>
+        </div>
+        <div class="col-lg-4 col-md-6 col-12">
+            <!-- Start Nav Social -->
+            <div class="nav-social">
+                <h5 class="title">Follow Us:</h5>
+                <ul>
+                    <li>
+                        <a href="javascript:void(0)" class="position-relative"><i class="lni lni-facebook-filled position-absolute top-50 start-50 translate-middle"></i></a>
+                    </li>
+                    <li>
+                        <a href="javascript:void(0)" class="position-relative"><i class="lni lni-twitter-original position-absolute top-50 start-50 translate-middle"></i></a>
+                    </li>
+                    <li>
+                        <a href="javascript:void(0)" class="position-relative"><i class="lni lni-instagram position-absolute top-50 start-50 translate-middle"></i></a>
+                    </li>
+                    <li>
+                        <a href="javascript:void(0)" class="position-relative"><i class="lni lni-skype position-absolute top-50 start-50 translate-middle"></i></a>
+                    </li>
+                </ul>
+            </div>
+            <!-- End Nav Social -->
+        </div>
+    </div>
+</div>
+<!-- End Header Bottom -->
+</header>
+ <!-- Start Hero Area -->
+    <section class="hero-area">
+      <div class="container">
+          <div class="row">
+              <div class="col-lg-8 col-12 custom-padding-right">
+                  <div class="slider-head">
+                      <!-- Start Hero Slider -->
+                      <div class="hero-slider">
+                          <!-- Start Single Slider -->
+                          <div class="single-slider"
+                              style="background-image: url(assets/images/shoes.jpg);">
+                              <div class="content">
+                                  <h2>
+                                      EPIC ENERGY.
+                                  </h2>
+                                <h2>
+                                  LIGHTEST EVER.
+                                </h2>
+                                  <p>Our lightest Ultraboost ever.</p>
+                                  <h3><span>Now Only</span> 4,249 EGP</h3>
+                                  <div class="button">
+                                      <a href="product-grids.html" class="btn">Shop Now</a>
+                                  </div>
+                              </div>
+                          </div>
+                          <!-- End Single Slider -->
+
+                      </div>
+                      <!-- End Hero Slider -->
+                  </div>
+              </div>
+              <div class="col-lg-4 col-12">
+                  <div class="row">
+                      <div class="col-lg-12 col-md-6 col-12 md-custom-padding">
+                          <!-- Start Small Banner -->
+                          <div class="hero-small-banner"
+                              style="background-image: url(assets/images/men.jpg);">
+<!--                            <a class="btn" href="product-grids.html">Shop Now</a>-->
+                          </div>
+                          <!-- End Small Banner -->
+                      </div>
+                      <div class="col-lg-12 col-md-6 col-12">
+                          <!-- Start Small Banner -->
+                          <div class="hero-small-banner style2"
+                              style="background-image: url(assets/images/offer.png);">  >
+
+                          </div>
+                          <!-- Start Small Banner -->
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </section>
+  <!-- End Hero Area -->
+
+  <!-- Start Trending Product Area -->
+  <section class="trending-product section">
+      <div class="container">
+          <div class="row">
+              <div class="col-12">
+                  <div class="section-title">
+                      <h2>Trending Products</h2>
+                      <p>There are many sportswear and workout clothes</p>
+                  </div>
+              </div>
+          </div>
+          <div class="row">
+              <div class="col-lg-3 col-md-6 col-12" *ngFor="let item of products |filter:search;let currentIndex=index">
+                  <!-- Start Single Product -->
+                  <div class="single-product" >
+                      <div class="product-image">
+                          <img src="{{item.image_url}}">
+<!--                        <img src="{{base64}}">-->
+                          <div class="button" (click)="addToCart(item)">
+                              <a class="btn"><i class="lni lni-cart"></i> Add to Cart</a>
+                          </div>
+                      </div>
+                      <div class="product-info">
+
+                          <h4 class="title title-card">
+                            <a onclick="document.getElementById('id01').style.display='block'" (click)="addInformationToCart(item)">{{item.name}}</a>
+                          </h4>
+                          <div class="price row">
+                              <span class="col-sm-10">{{item.price}} EGP</span>
+                              <!-- <a class="main-btn position-relative col-sm-2 numorder py-3">
+                                <i class="lni lni-cart position-absolute top-50 start-50 translate-middle"></i>
+                                <span class="total-items py-1 px-2">{{count}}</span>
+                            </a> -->
+                          </div>
+                      </div>
+                  </div>
+                  <!-- End Single Product -->
+              </div>
+
+          </div>
+      </div>
+  </section>
+  <!-- End Trending Product Area -->
+
+<!--  &lt;!&ndash; Start Banner Area &ndash;&gt;-->
+<!--  <section class="banner section">-->
+<!--      <div class="container">-->
+<!--          <div class="row">-->
+<!--              <div class="col-lg-6 col-md-6 col-12">-->
+<!--                  <div class="single-banner" style="background-image:url(assets/images/HP1565_01_standard.jpg)" >-->
+<!--                      <div class="content">-->
+<!--                          <h2>WEEKENDER BAG</h2>-->
+<!--                          <p> 1189 EGP </p>-->
+<!--                          <div class="button">-->
+<!--                              <a routerLink="/details" class="btn">View Details</a>-->
+<!--                          </div>-->
+<!--                      </div>-->
+<!--                  </div>-->
+<!--              </div>-->
+<!--          </div>-->
+<!--      </div>-->
+<!--  </section>-->
+<!--  &lt;!&ndash; End Banner Area &ndash;&gt;-->
+
+  <!-- Start Special Offer -->
+  <section class="special-offer section">
+      <div class="container">
+          <div class="row">
+              <div class="col-12">
+                  <div class="section-title">
+                      <h2>Special Offer</h2>
+
+                  </div>
+              </div>
+          </div>
+          <div class="row">
+              <div class="col-lg-8 col-md-12 col-12" >
+                  <div class="row">
+                      <div class="col-lg-4 col-md-4 col-12" *ngFor="let item of products;let currentIndex=index">
+                          <!-- Start Single Product -->
+                          <div class="single-product">
+                              <div class="product-image">
+                                  <img src="{{item.image_url}}" >
+                                  <div class="button"   (click)="addToCart(getInformationOfCart())">
+                                      <a class="btn"><i class="lni lni-cart"></i> Add to
+                                          Cart</a>
+                                  </div>
+                              </div>
+                              <div class="product-info">
+                                  <h4 class="title title-card">
+                                    <a onclick="document.getElementById('id01').style.display='block'" (click)="addInformationToCart(item)">{{item.name}}</a>
+                                  </h4>
+                                  <div class="price">
+                                      <span>{{item.price}} EGP</span>
+                                  </div>
+                              </div>
+                          </div>
+                          <!-- End Single Product -->
+                      </div>
+
+
+
+                  </div>
+                  <!-- Start Banner -->
+                  <div class="single-banner right"
+                      style="background-image:url(assets/images/HP1565_01_standard.jpg);margin-top: 30px;">
+                      <div class="content">
+                          <h2>White Bag</h2>
+                          <p></p>
+                          <div class="price">
+                              <span>1500 EGP</span>
+                          </div>
+                          <div class="button">
+                              <a routerLink="/home" class="btn">Shop Now</a>
+                          </div>
+                      </div>
+                  </div>
+                  <!-- End Banner -->
+              </div>
+              <div class="col-lg-4 col-md-12 col-12">
+                  <div class="offer-content">
+                      <div class="image">
+                          <img src="assets/images/GZ7922_04_standard.jpg">
+                          <span class="sale-tag">-50%</span>
+                      </div>
+                      <div class="text">
+                          <h2><a routerLink="/home">NMD_R1 SHOES</a></h2>
+                          <div class="price">
+                              <span>4000 EGP</span>
+                              <span class="discount-price">2000 EGP</span>
+                          </div>
+                          <p>Inspired by an acclaimed '80s runner from the adidas archives</p>
+                      </div>
+                      <div style="background: rgb(204, 24, 24);" class="alert">
+                          <h1 style="padding: 50px 80px;color: white;">We are sorry, Event ended ! </h1>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+
+  </section>
+
+
+
+
+
+
+
+<div id="id01" class="modal">
+
+  <div class="modal-content animate">
+    <div class="d-flex justify-content-end m-2 mb-0">
+      <span class="fa-icon p-3 bg-danger mb-0" onclick="document.getElementById('id01').style.display='none'">
+        <fa-icon class="light" icon="xmark"></fa-icon>
+      </span>
+    </div>
+    <div class="card my-5">
+      <div class="row g-0">
+        <div class="col-md-4">
+          <img [src]="getInformationOfCart().image_url" class="w-100 h-100"alt="image not found">
+        </div>
+        <div class="col-md-8 w-50">
+          <div class="card-body mx-4">
+            <h4 class="card-title my-4">{{getInformationOfCart().name}}</h4>
+            <p class="card-text my-4">{{getInformationOfCart().description}}</p>
+            <!-- <label>number: </label> -->
+            <button type="button" class="py-2 px-3 mx-1 mins" (click)="mins()"> - </button>
+            <input type="text" [(ngModel)]="amount" class="px-3 py-2">
+            <button type="button" class="py-2 px-3 mx-1 plus" (click)="plus()"> + </button>
+            <h5 class=" my-3">{{getInformationOfCart().price}} EGP</h5>
+            <div class="my-3">
+            </div>  <!--  flex-row-reverse -->
+            <div class="m-3 btns" >
+              <a class="mx-2"> <button type="button" class="btnAdd btn px-3 py-2"  (click)="addToCart(getInformationOfCart())" onclick="document.getElementById('id01').style.display='none'">Add To Cart</button></a>
+              <a class="mx-2" routerLink="/orders"><button type="button" class="btnBuy btn px-3 py-2">Buy Now</button></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+  <!-- End Special Offer -->
+

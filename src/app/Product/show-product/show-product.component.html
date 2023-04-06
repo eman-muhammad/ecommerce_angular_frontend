@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+</head>
+<body style="background: #061734">
+
+<div class="container mt-4" [formGroup]="form">
+
+  <div class="card p-4">
+    <h1 class="mb-5 text-center">Manage Products</h1>
+    <div class="form-form">
+      <div class="form-group">
+        <label>Name</label>
+        <input type="text"   class="form-control"  placeholder="Enter Name" formControlName="name" required>
+      </div>
+
+      <div class="form-group">
+        <label class>Price</label>
+        <input type="number"  class="form-control" placeholder="Enter Price" formControlName="price" required>
+      </div>
+
+      <div class="form-group">
+        <label>Size</label>
+        <input type="text"  class="form-control"  placeholder="Enter Size" formControlName="size" required>
+      </div>
+
+      <div class="form-group">
+        <label>Category</label>
+        <select class="form-select" aria-label="Default select example" formControlName="category_id" required>
+          <!--        <option selected>Open this select menu</option>-->
+          <option value="1"  >WOMEN</option>
+          <option value="2" >MEN</option>
+          <option value="3" >KIDS</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label>Description</label>
+        <textarea class="form-control"   formControlName="description" required></textarea>
+      </div>
+      <div  class="form-group">
+        <label>Image</label>
+        <!--                  <img src="{{base64}}" alt="">-->
+        <input type="text" class="form-control" formControlName="image_url" >
+      </div>
+      <button type="submit" class="btn mt-4 btnSubmit" (click)="add()">Save</button>
+    </div>
+  </div>
+</div>
+
+<div class="container mt-4" >
+  <h1 class="color-h1">All Products</h1>
+  <table class="table">
+    <thead>
+
+    <tr>
+      <th scope="col">Image</th>
+      <th scope="col">Name</th>
+      <th scope="col">Price</th>
+      <th scope="col">Description</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let item of products;let currentIndex=index">
+
+      <th><img src="{{item.image_url }}" width="55"></th>
+      <th>{{item.name }}</th>
+      <th>{{item.price}}</th>
+            <th>{{item.description |length:30}}</th>
+      <td>
+        <button type="button" class="btn btn-success" (click)="update(item)">Edit</button>
+        <button type="button" class="btn btn-danger" (click)="delete(currentIndex)">Delete</button>
+      </td>
+    </tr>
+    </tbody>
+  </table>
+</div>
+
+</body>
+</html>

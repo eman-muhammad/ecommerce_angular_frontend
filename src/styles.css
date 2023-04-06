@@ -1,0 +1,28 @@
+/*!* You can add global styles to this file, and also import other style files *!*/
+/*:root{*/
+/*  --main-color: rgb(16, 67, 140);*/
+/*}*/
+
+/*body,.btnSubmit{*/
+/*  background-color: var(--main-color);*/
+/*}*/
+/*h1{*/
+/*  color: var(--main-color);*/
+/*}*/
+/*.btnSubmit,tr{*/
+/*  color: #ffffff;*/
+/*}*/
+/*.btnSubmit:hover{*/
+/*  color: rgb(12, 53, 96);*/
+/*  border: 2px solid rgb(12, 53, 96);*/
+/*}*/
+/*form{*/
+/*  width:50%;*/
+/*  margin: auto;*/
+/*}*/
+/*.btn-success{*/
+/*  margin-right: 10px;*/
+/*}*/
+.main-content.page-m{
+  padding: 10% 30% 10% 5%
+}
